@@ -153,14 +153,6 @@
           try{
             if ($connection->query($sql) === TRUE){
               $_SESSION['logged'] = true;
-              //limpar session
-              unset($_SESSION['username']);
-              unset($_SESSION['password1']);
-              unset($_SESSION['password2']);
-              unset($_SESSION['email']);
-              unset($_SESSION['prinome']);
-              unset($_SESSION['ultnome']);
-              unset($_SESSION['cc']);
               header('Location: principal.php');
             }
             else{

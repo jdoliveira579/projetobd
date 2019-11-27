@@ -21,7 +21,6 @@
 		$password = $_POST['input_user_password'];
 
 		$username = htmlentities($username, ENT_QUOTES, "UTF-8");
-		$_SESSION['username'] = "";
 		if ($result= @$connection->query(sprintf("SELECT username FROM utilizador WHERE username ='%s'", mysqli_real_escape_string($connection,$username)))){
 			$count_users = $result->num_rows;
 			if($count_users>0){
